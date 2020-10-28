@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 		startPosition = this.transform.position;
 		aud = GameObject.Find("AudioSource").GetComponent<AudioSource>();
 		CalibrateTilt();
-		jumpButton.interactable = false;
+		jumpButton.interactable = canJump;
 		
 	}
 

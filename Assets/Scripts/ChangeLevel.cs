@@ -7,6 +7,11 @@ public class ChangeLevel : MonoBehaviour
 	[Tooltip("The name of the scene you want to go to.")]
 	public string destination;
 
+	void Start() {
+		// find the backgroundMusic gameObject and check for new music.
+		GameObject.Find("BackgroundMusic").GetComponent<PlayBackgroundMusic>().CheckForNewWorld2();
+	}
+
     void OnTriggerEnter(Collider other) {
 		if(other.gameObject.CompareTag("Player")) {
 			other.GetComponent<PlayerMovement>().ResetPlayer();
